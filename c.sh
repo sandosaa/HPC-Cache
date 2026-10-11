@@ -18,7 +18,7 @@
 
 	 
 mkdir -p HPC
-cd $HPC
+cd HPC
 
 for num in 512 1025 2049;do
     echo "#include <stdio.h>
@@ -30,15 +30,17 @@ for num in 512 1025 2049;do
                 for(int k =0; k< NUM; k++)
                   c[i][k]+= a[i][j] * b[j][k];
 	  }">good.c
-     echo "#include <stdio.h>
-	   #define NUM ${num}
-           int main(){
-	     static int c[NUM][NUM], a[NUM][NUM], b[NUM][NUM];
-             for(int j= 0; j < NUM;j++)
-               for(int k= 0; k < NUM; k++)
-                 for(int i =0; i< NUM; i++)
-                   c[i][k]+= a[i][j] * b[j][k];
-          }">bad.c
+
+    echo "#include <stdio.h>
+	  #define NUM ${num}
+    int main(){
+	    static int c[NUM][NUM], a[NUM][NUM], b[NUM][NUM];
+            for(int j= 0; j < NUM;j++)
+              for(int k= 0; k < NUM; k++)
+                for(int i =0; i< NUM; i++)
+                  c[i][k]+= a[i][j] * b[j][k];
+    }">bad.c
+
     gcc -O0 good.c -o good.out
     gcc -O0 bad.c -o bad.out
     echo -e "\n----${num}x${num}----"
