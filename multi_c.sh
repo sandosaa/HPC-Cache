@@ -14,7 +14,7 @@
 # This shell script will show you the difference between looping in Row major order & Column major order.
 
 #Usage
-# ./c.sh
+# ./multi_c.sh
 
 	 
 mkdir -p HPC_MULTI
