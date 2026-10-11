@@ -14,7 +14,7 @@
 mkdir -p HPC_SUM
 cd HPC_SUM
 
-for num in 100 1000 10000;do
+for num in 100 1000 10000 15000;do
     echo "#include <stdio.h>
 	  #define NUM ${num}
 	  int main(){
