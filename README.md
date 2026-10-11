@@ -19,4 +19,5 @@ chmod +x c.sh
  
 ## Desired Output
 As you will see, the time in GOOD one is much smaller than BAD one, that's beacuse of the way we access data.
+
 ![](assets/results.png)
