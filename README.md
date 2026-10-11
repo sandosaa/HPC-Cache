@@ -9,10 +9,11 @@ git clone HPC-Cache
 cd  HPC-Cache
 
 # Give an execution premission to the script
-chmod +x c.sh
+chmod +x *.sh
 
 # Start
-./c.sh
+./multi_c.sh # to try mxm
+./sum_c.sh # to try m+m
 ```
 > Note: I didn't use number like 10, 100 or any beautiful number, beacuse in many device "as mine" has something called **Hardware Prefetching**, which is a feature in CPU performance and optimize the process even if the compiler doesn't optimize [See the reference](https://www.sciencedirect.com/topics/computer-science/hardware-prefetcher)
 ![](assets/not_wanted_result.jpg)

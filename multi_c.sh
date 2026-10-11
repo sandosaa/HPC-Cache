@@ -17,8 +17,8 @@
 # ./c.sh
 
 	 
-mkdir -p HPC
-cd HPC
+mkdir -p HPC_MULTI
+cd HPC_MULTI
 
 for num in 512 1025 2049;do
     echo "#include <stdio.h>
